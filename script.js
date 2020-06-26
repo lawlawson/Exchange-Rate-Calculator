@@ -9,7 +9,15 @@ const swap = document.getElementById('swap');
 
 // Fetch exchange rates and update the DOM
 function calculate() {
-  console.log('RAN');
+    const currency_one = currencyEl_one.value;
+    const currency_two = currencyEl_two.value;
+
+    fetch(`https://open.exchangerate-api.com/v6/latest/${currency_one}`)
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+        });
+  
 }
 
 // Event listeners
